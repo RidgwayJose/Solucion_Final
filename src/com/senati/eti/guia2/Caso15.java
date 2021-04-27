@@ -87,18 +87,6 @@ public class Caso15 {
         System.out.println("Forma de pago........: " + pago);
         System.out.println(des_o_inc + dec.format(Math.abs(monto)));
         System.out.println("Total a pagar........: " + dec.format((importe + monto)));
-        
-        
-        
-        
-        
-
-		
-		
-		
-			
-			
-
 	}
 
 }
