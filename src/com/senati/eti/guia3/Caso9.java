@@ -61,7 +61,7 @@ public class Caso9 {
 				n_cert++;
 			}
 			
-			if (promedio > mayor_promedio) {
+			if (promedio >= mayor_promedio) {
 				mayor_promedio = promedio;
 				n_mayor_p = nombre;
 				}
