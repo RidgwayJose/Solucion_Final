@@ -29,25 +29,25 @@ public class Caso9 {
 			nota2 = sc.nextInt();
 			System.out.print("Nota 3: ");
 			nota3 = sc.nextInt();
-			if (nota1 > 20 || nota2 > 20 || nota3 > 20) {
+			if (nota1 > 20 || nota1 < 0 || nota2 > 20|| nota2 < 0 || nota3 > 20 || nota3 < 0) {
 				System.out.println("----------------------");
 				System.out.println("Una o más notas no son validas");
 				System.out.println("Por favor ingrese las notas nuevamente");
 				System.out.println("----------------------");
 			}
-			}while(nota1 > 20 || nota2 > 20 || nota3 > 20);
+			}while(nota1 > 20 || nota1 < 0 || nota2 > 20|| nota2 < 0 || nota3 > 20 || nota3 < 0);
 			
 			
 			do {
 			System.out.print("Asistencia [0-12]: ");
 			na = sc.nextInt();
-			if (na >12) {
+			if (na >12 || na < 0) {
 				System.out.println("----------------------");
 				System.out.println("No valido");
 				System.out.println("Intentelo nuevamente");
 				System.out.println("----------------------");
 			}
-			}while(na > 12);
+			}while(na > 12 || na < 0);
 			
 			float promedio = nota1 * 0.2f + nota2 * 0.3f + nota3 * 0.5f;
 			float porcentaje_asistencia = na * 100f / 12f;
