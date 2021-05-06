@@ -13,7 +13,7 @@ public class Caso9 {
 		int num_reg = 0, o_cert = 0, n_cert = 0, nota1 = 21, nota2 = 21, nota3 = 21, na = 0;
 		float mayor_promedio = 0, menor_promedio = 21;
 		
-		while(rpta.toUpperCase().equals("S")) {
+		while(rpta.toUpperCase().equals("S")) {  //Bucle que repite el proceso con (s o S)
 			num_reg++;
 			System.out.println("----------------------");
 			System.out.println("REGISTRO " + num_reg + ":");
@@ -22,23 +22,23 @@ public class Caso9 {
 			System.out.print("Nombre de alumno: ");
 			nombre = sc.nextLine();
 			
-			do {
+			do {									//Lectura y validación de notas
 			System.out.print("Nota 1: ");
 			nota1 = sc.nextInt();
 			System.out.print("Nota 2: ");
 			nota2 = sc.nextInt();
 			System.out.print("Nota 3: ");
 			nota3 = sc.nextInt();
-			if (nota1 > 20 || nota1 < 0 || nota2 > 20|| nota2 < 0 || nota3 > 20 || nota3 < 0) {
+			if (nota1 > 20 || nota1 < 0 || nota2 > 20|| nota2 < 0 || nota3 > 20 || nota3 < 0) { //Mensaje de error
 				System.out.println("----------------------");
 				System.out.println("Una o más notas no son validas");
 				System.out.println("Por favor ingrese las notas nuevamente");
 				System.out.println("----------------------");
 			}
-			}while(nota1 > 20 || nota1 < 0 || nota2 > 20|| nota2 < 0 || nota3 > 20 || nota3 < 0);
+			}while(nota1 > 20 || nota1 < 0 || nota2 > 20|| nota2 < 0 || nota3 > 20 || nota3 < 0); // Bucle y condicion de validación
 			
 			
-			do {
+			do {											//Lectura y validacion de asistencia
 			System.out.print("Asistencia [0-12]: ");
 			na = sc.nextInt();
 			if (na >12 || na < 0) {
@@ -47,7 +47,7 @@ public class Caso9 {
 				System.out.println("Intentelo nuevamente");
 				System.out.println("----------------------");
 			}
-			}while(na > 12 || na < 0);
+			}while(na > 12 || na < 0);						// Bucle y condicion de validación
 			
 			float promedio = nota1 * 0.2f + nota2 * 0.3f + nota3 * 0.5f;
 			float porcentaje_asistencia = na * 100f / 12f;
@@ -80,11 +80,11 @@ public class Caso9 {
 			
 			sc.nextLine(); //Limpieza del buffer
 			
-			do {
+			do {																//Lectura de repeticion de bucle principal
 			System.out.println("----------------");
 			System.out.print("¿Desea registrar otro participante? <S/N>: ");
 			rpta = sc.nextLine();
-			}while (!"S".equals(rpta.toUpperCase()) && !"N".equals(rpta.toUpperCase()));
+			}while (!"S".equals(rpta.toUpperCase()) && !"N".equals(rpta.toUpperCase()));  //Validación de respuesta
 			
 			
 		}
